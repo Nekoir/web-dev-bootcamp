@@ -13,8 +13,67 @@
         font-family: "Sono", sans-serif;
       }
 
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        height: 100vh;
+        text-align: center;
+        align-items: center;
+        
+      }
+
+      .pricing-plan {
+        background-color: #f2f2f2;
+        flex-basis: 400px;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      .plan-title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .plan-price {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .plan-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+      }
+
+      .plan-features li {
+        margin-bottom: 20px;
+      }
+
+
+      .plan-button {
+        background-color: #ff6600;
+        color: white;
+        border: 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+
       /* Hint: What can you do with a media query and flexbox? */
       @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column;
+          height: 100%; /* To make sure you are able to scroll because if you set it to 100vh and the content go over the viewport height, it will go out of the scrolling zone */
+        }
+
+        .pricing-plan {
+          width: 400px; 
+          flex-basis: auto;
+        }
       }
     </style>
   </head>
